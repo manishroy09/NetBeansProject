@@ -13,10 +13,12 @@
     </head>
     <body>
         <%!
+            //Declaration tags 
             int sqr(int x){
             return x*x;
         }
         %>
         <h1> Square is : <%= sqr(6)%></h1>
+<!--        Expression tags-->
     </body>
 </html>

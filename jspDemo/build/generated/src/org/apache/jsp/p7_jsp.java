@@ -8,6 +8,7 @@ public final class p7_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
 
+            //Declaration tags 
             int sqr(int x){
             return x*x;
         }
@@ -61,6 +62,7 @@ public final class p7_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <h1> Square is : ");
       out.print( sqr(6));
       out.write("</h1>\n");
+      out.write("<!--        Expression tags-->\n");
       out.write("    </body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {

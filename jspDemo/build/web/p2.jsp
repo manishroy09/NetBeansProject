@@ -13,6 +13,7 @@
     </head>
     <body>
         <% 
+            //Scriptlet Tags
       //Step1: Fetch data from the request
       String name = request.getParameter("name");
       //Step2: print result 
