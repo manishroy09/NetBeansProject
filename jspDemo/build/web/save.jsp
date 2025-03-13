@@ -15,6 +15,8 @@
     </head>
     <body>
         <%
+            //Step1: Fetch data from the request  
+           
             int sid = Integer.parseInt(request.getParameter("sid"));
             String name = request.getParameter("name");
             String enroll = request.getParameter("enroll");
@@ -27,6 +29,7 @@
 
          //Step2: create object of bean 
          StudentBean sb = new StudentBean();
+         //Step3: set data into bean 
          sb.getSid();
          sb.getName();
          sb.getEnroll();
@@ -40,7 +43,12 @@
          StudentDAO sd = new StudentDAO();
          int r = sd.addStudent(sb);
          if(r>0){
-             System.out.println("Data Added");
+            out.println("Student Added Success");
+//             response.sendRedirect("viewstudent.jsp");
+         }else{
+             out.println("<h1><font color='red'>Student Not Added Please Try again.... </h1>");
+             RequestDispatcher rd = request.getRequestDispatcher("addStudent.jsp");
+             rd.include(request, response);
          }
             %>
             
