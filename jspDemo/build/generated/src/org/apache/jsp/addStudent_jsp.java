@@ -48,7 +48,7 @@ public final class addStudent_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<html>\n");
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <title>JSP Page</title>\n");
+      out.write("        <title>Add Student </title>\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
       out.write("        <form action=\"save.jsp\" method=\"post\">\n");

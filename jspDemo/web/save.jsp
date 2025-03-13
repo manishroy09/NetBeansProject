@@ -30,21 +30,22 @@
          //Step2: create object of bean 
          StudentBean sb = new StudentBean();
          //Step3: set data into bean 
-         sb.getSid();
-         sb.getName();
-         sb.getEnroll();
-         sb.getP();
-         sb.getC();
-         sb.getE();
-         sb.getM();
-         sb.getH();
+         sb.setC(c);
+         sb.setSid(sid);
+         sb.setName(name);
+         sb.setEnroll(enroll);
+         sb.setP(p);
+         sb.setE(e);
+         sb.setH(h);
+         sb.setM(m);
+         
          
     //Step3: Crate object of StudenDAO
          StudentDAO sd = new StudentDAO();
          int r = sd.addStudent(sb);
          if(r>0){
             out.println("Student Added Success");
-//             response.sendRedirect("viewstudent.jsp");
+             response.sendRedirect("viewstudent.jsp");
          }else{
              out.println("<h1><font color='red'>Student Not Added Please Try again.... </h1>");
              RequestDispatcher rd = request.getRequestDispatcher("addStudent.jsp");
