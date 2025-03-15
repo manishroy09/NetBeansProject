@@ -10,22 +10,22 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>LoginController</title>
     </head>
     <body>
         <%
-        String un = request.getParameter("un");
-        String ps = request.getParameter("ps");
-        
-      UsersDAO ud = new UsersDAO();
-      int r = ud.logintCheck(un, ps);
-      if(r>0){
-          response.sendRedirect("viewstudent.jsp");
-      }else{
-          out.println("Login fail please try Again....");
-          RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
-          rd.include(request, response);
-      }
+            String un = request.getParameter("un");
+            String ps = request.getParameter("ps");
+
+            UsersDAO ud = new UsersDAO();
+            int r = ud.logintCheck(un, ps);
+            if (r > 0) {
+                response.sendRedirect("viewstudent.jsp");
+            } else {
+                out.println("Login fail please try Again....");
+                RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+                rd.include(request, response);
+            }
         %>
     </body>
 </html>
