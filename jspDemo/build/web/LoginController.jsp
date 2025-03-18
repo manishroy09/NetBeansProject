@@ -20,6 +20,7 @@
             UsersDAO ud = new UsersDAO();
             int r = ud.logintCheck(un, ps);
             if (r > 0) {
+                session.setAttribute("user", un);
                 response.sendRedirect("viewstudent.jsp");
             } else {
                 out.println("Login fail please try Again....");

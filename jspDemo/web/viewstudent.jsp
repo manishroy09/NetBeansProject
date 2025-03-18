@@ -15,6 +15,17 @@
         <title>View Table </title>
     </head>
     <body>
+        <%
+ if(session.getAttribute("user")==null){
+ response.sendRedirect("login.jsp");
+ }
+ //step1: Fetch data from the session
+ String un=(String)session.getAttribute("user");
+ %>
+ <hr color="green">
+ <h1> <font color="blue"> Welcome : <%=un %></font></h1>
+ <hr color="red">
+ 
         <h1>All Student Data</h1>
         <h1><a href="addStudent.jsp">Add New Student </a></h1>
             <table border="1" align="center">
