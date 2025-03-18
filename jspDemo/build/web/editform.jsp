@@ -23,6 +23,16 @@
     StudentBean sb = sd.findById(sid);
     
     %>
+    
+    <%
+ 
+ //step1: Fetch data from the session
+ String un=(String)session.getAttribute("user");
+ %>
+ <hr color="green">
+ <h1> <font color="blue"> Welcome : <%=un %></font></h1>
+ <hr color="red">
+ 
     <form action="update.jsp" method="post">
             <table  width="60%">
                 <tr>
