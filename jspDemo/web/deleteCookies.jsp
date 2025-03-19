@@ -1,6 +1,6 @@
 <%-- 
-    Document   : readCookie
-    Created on : 18 Mar, 2025, 4:35:10 PM
+    Document   : deleteCookies
+    Created on : 19 Mar, 2025, 11:31:26 AM
     Author     : manis
 --%>
 
@@ -9,22 +9,25 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Read Cookies</title>
+        <title>JSP Page</title>
     </head>
     <body>
-        <h1>Read Cookies</h1>
         <%
             Cookie cookie = null;
-
-            Cookie[] cookies = request.getCookies();
+            Cookie[] cookies = null;
+            cookies = request.getCookies();
             if (cookies != null) {
                 for (int i = 0; i < cookies.length; i++) {
                     cookie = cookies[i];
+                    if ((cookie.getName()).compareTo("username-cookie") == 0) {
+                        cookie.setMaxAge(0);
+                        response.addCookie(cookie);
+                        out.print("Deleted cookie: " + cookie.getName() + "<br/>");
+                    }
+
                     out.print("Name : " + cookie.getName() + ",  ");
                     out.print("Value: " + cookie.getValue() + " <br/>");
                 }
-            }else{
-                out.println("<h2>No cookies founds</h2>");
             }
         %>
     </body>
