@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20 Mar, 2025 8:39:01 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.manish.bean.Student" table="student" catalog="march20" optimistic-lock="version">
+        <id name="sid" type="int">
+            <column name="Sid" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="Name" length="45" />
+        </property>
+        <property name="enroll" type="string">
+            <column name="Enroll" length="45" />
+        </property>
+        <property name="p" type="java.lang.Integer">
+            <column name="P" />
+        </property>
+        <property name="c" type="java.lang.Integer">
+            <column name="C" />
+        </property>
+        <property name="m" type="java.lang.Integer">
+            <column name="M" />
+        </property>
+        <property name="h" type="java.lang.Integer">
+            <column name="H" />
+        </property>
+        <property name="e" type="java.lang.Integer">
+            <column name="E" />
+        </property>
+        <property name="total" type="java.lang.Integer">
+            <column name="Total" />
+        </property>
+        <property name="per" type="java.lang.Float">
+            <column name="Per" precision="12" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>
