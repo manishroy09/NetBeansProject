@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+
 <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <!--
 DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
@@ -47,6 +47,8 @@ Contributor(s):
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">Manish@2163</property>
     <property name="show_sql">true</property>
+    <property name="hbm2ddl .auto">update</property>
+    <mapping class="com.manish.bean.Product"/>
     <mapping resource="com/manish/bean/Student.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>
