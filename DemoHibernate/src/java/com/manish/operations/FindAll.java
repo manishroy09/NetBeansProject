@@ -17,18 +17,20 @@ import org.hibernate.SessionFactory;
  * @author manis
  */
 public class FindAll {
+
     public static void main(String[] args) {
-         //step1: create object of session factory 
+        //step1: create object of session factory 
         SessionFactory sf = HibernateUtil.getSessionFactory();
         //step2: create object of session 
         Session session = sf.openSession();
         //step3: create object of student Query interface 
         Query q = session.createQuery("from Student s");
-        ArrayList<Student> all = ( ArrayList<Student>)q.list();
+        ArrayList<Student> all = (ArrayList<Student>) q.list();
         //Step4: Traverse data using for each 
-        for(Student sb: all){
-            System.out.println(""+sb.getEnroll()+"\t"+sb.getName()+"\t"+sb.getC());
+        for (Student sb : all) {
+            System.out.println("" + sb.getEnroll() + "\t" + sb.getName() + "\t" + sb.getPer() + "\t" + sb.getTotal());
         }
-      
+        session.close();
+        sf.close();
     }
 }
