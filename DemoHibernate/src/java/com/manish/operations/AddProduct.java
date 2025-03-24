@@ -24,9 +24,9 @@ public class AddProduct {
         //step3: create object of  product  class
         Product p = new Product();
         // step4: set data into bean 
-       p.setPid(101);
+       p.setPid(102);
        p.setPname("mobile");
-       p.setPrice(12000.56f);
+       p.setPrice(12000);
        
        //step5: calll save method 
          session.save(p);

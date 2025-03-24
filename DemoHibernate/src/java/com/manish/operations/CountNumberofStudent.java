@@ -5,35 +5,25 @@
  */
 package com.manish.operations;
 
-import com.manish.bean.Student;
 import com.manish.utility.HibernateUtil;
-import java.util.ArrayList;
-import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.criterion.Order;
 
 /**
  *
  * @author manis
  */
-public class FindAll {
-
+public class CountNumberofStudent {
     public static void main(String[] args) {
-        //step1: create object of session factory 
+         //step1: create object of session factory 
         SessionFactory sf = HibernateUtil.getSessionFactory();
         //step2: create object of session 
         Session session = sf.openSession();
-        //step3: create object of student Query interface 
-       Criteria q =session.createCriteria(Student.class);
-      q.addOrder(Order.desc("total"));
-      ArrayList<Student> all = (ArrayList<Student>)q.list();
-      for(Student sb: all ){
-          System.out.println(""+sb.getEnroll()+"\t"+sb.getName()+"\t"+sb.getPer()+"\t"+sb.getTotal());
-      }
+        Query q =session.createQuery("SELECT COUNT(sid) FROM STUDENT");
+         Long counts=(Long) q.uniqueResult();
+        System.out.println("Number of Students : "+counts);
         session.close();
         sf.close();
     }
 }
-  
