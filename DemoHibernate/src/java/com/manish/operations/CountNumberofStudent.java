@@ -26,9 +26,14 @@ public class CountNumberofStudent {
 //        System.out.println("Number of Students : "+counts); 
 
       //2.Calculate sum of total marks in the student table
-        Query q = session.createQuery("SELECT sum(total) from Student");
-        Long counts = (Long) q.uniqueResult();
-        System.out.println("Sum of Total Marks : "+counts);
+//        Query q = session.createQuery("SELECT sum(total) from Student");
+//        Long counts = (Long) q.uniqueResult();
+//        System.out.println("Sum of Total Marks : "+counts);    
+
+      //3.Calculate Average marks of physics in the  student table
+      Query q=session.createQuery("SELECT avg(p) From Student");
+      Double counts =(Double) q.uniqueResult();
+        System.out.println("Average Marks of Physics : "+counts);
         session.close();
         sf.close();
     }
