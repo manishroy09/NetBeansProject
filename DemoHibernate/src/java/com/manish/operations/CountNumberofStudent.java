@@ -20,7 +20,7 @@ public class CountNumberofStudent {
         SessionFactory sf = HibernateUtil.getSessionFactory();
         //step2: create object of session 
         Session session = sf.openSession();
-        Query q =session.createQuery("SELECT COUNT(sid) FROM STUDENT");
+        Query q =session.createQuery("SELECT COUNT(sid) From Student");
          Long counts=(Long) q.uniqueResult();
         System.out.println("Number of Students : "+counts);
         session.close();
