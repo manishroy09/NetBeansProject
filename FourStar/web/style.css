@@ -9,8 +9,41 @@ and open the template in the editor.
 */
 
 *{
+    font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    box-sizing: border-box;
+}
+
+/* variables */
+:root{
+    --contaier-color:#1a1e21;
+    --second-color: #fd8f44;
+    --text-color: #172317;
+    --bg-color: #fff;
+}
+::selection{
+    color: var(--bg-color);
+    background: var(--second-color);
+}
+
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+img{
+    width: 100%;
+}
+section{
+    padding: 3rem 0 2rem;
+}
+.container{
+    max-width: 1068px;
+    margin: auto;
     width: 100%;
 }
 .navbar{
@@ -22,7 +55,7 @@ and open the template in the editor.
 }
 .navbar ul{
     display: flex;
-   gap: none;
+    gap: none;
 }
 .navbar ul li{
     list-style: none;
