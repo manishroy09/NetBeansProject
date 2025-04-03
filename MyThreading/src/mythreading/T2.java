@@ -9,23 +9,19 @@ package mythreading;
  *
  * @author manis
  */
-public class T1 extends Thread{
-
-    public void run() {
-        for (int i = 1; i <= 5; i++) {
-            System.out.println("Child  Thread " + i);
+public class T2 implements Runnable {
+    public void run(){
+          for(int i=0; i<=5; i++){
+            System.out.println("Child Thread : " +i);
         }
     }
-
     
     public static void main(String[] args) {
+        Thread t2 = new Thread(new T2());
+        t2.start();
         
-        T1 t1 = new T1();
-        t1.start();
-
-        for (int i = 1; i <= 5; i++) {
-            System.out.println("Main Thread " + i);
+        for(int i=0; i<=5; i++){
+            System.out.println("Main Thread : " +i);
         }
     }
-
 }
