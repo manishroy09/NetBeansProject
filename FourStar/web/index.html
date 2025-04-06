@@ -9,16 +9,56 @@ and open the template in the editor.
         <title>Four Star</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="style.css">
+        <style>
+            
+            *{
+                margin: 0;
+                padding: 0;
+                
+            }
+            .navbar{
+                display: flex;
+                align-content: center;
+                justify-content: space-around;
+                background-color: #80CBC4;
+                padding: 20px;
+                
+             }
+                 ul{
+                    display: flex;
+                    gap:10px;
+                    list-style: none;
+            }
+            .navbar ul li a{
+                text-decoration: none;
+                color: black;
+            }
+            .navbar ul li a:hover{
+                border: 2px solid black;
+                background-color: #FFB433;
+                padding:5px;
+                border-radius: 10px;
+            }
+            .navbar button{
+                padding: 5px;
+                border-radius: 10px;
+                background-color: #FFB433;
+            }
+            .navbar button:hover{
+                padding: 8px;
+                
+            }
+        </style>
     </head>
     <body>
         <nav class="navbar">
             <h1>4Star</h1>
             <ul>
-                <li>Home</li>
-                <li>Login</li>
-                <li>Home</li>
+                <li><a href="">Home</a></li>
+                <li><a href="">Login</a></li>
+                <li><a href="">Profile</a></li>
             </ul>
+            <button>Admin Login</button>
         </nav>
     </body>
 </html>
