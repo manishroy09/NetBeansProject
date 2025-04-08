@@ -14,16 +14,12 @@
             .container1{
                 display: flex;
                 align-items: center;
-               justify-content: center;
-               background-color: #B4EBE6;
-               padding: 20px;
-            }
-            .details{
-               
+                justify-content: center;
+                background-color: #B4EBE6;
+                padding: 20px;
             }
             .row{
                 display: flex;
-                 
             }
         </style>
     </head>
@@ -45,19 +41,19 @@
                 </select>
             </div>
         </div>
-        <div>
+        <div class="container2">
             <p>RS 200 PREMIUM</p>
             <hr
                 <div class="row">
-                    <p>A</p>
-                    <div class="seat">1</div> 
-                    <div class="seat">2</div> 
-                    <div class="seat">3</div> 
-                    <div class="seat">4</div> 
-                    <div class="seat">5</div> 
-                    <div class="seat">6</div> 
-                    <div class="seat">7</div> 
-                    <div class="seat">8</div> 
+                <p>A</p>
+                <div class="seat">1</div> 
+                <div class="seat">2</div> 
+                <div class="seat">3</div> 
+                <div class="seat">4</div> 
+                <div class="seat">5</div> 
+                <div class="seat">6</div> 
+                <div class="seat">7</div> 
+                <div class="seat">8</div> 
             </div>
         </div>
     </body>
