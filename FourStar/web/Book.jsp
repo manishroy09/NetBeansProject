@@ -21,14 +21,26 @@
 
             .seat{
                 border: 2px solid black;
-                padding: 10px;
+                padding: 5px;
                 height: 12px;
                 width: 15px;
                 margin: 3px;
+                border-radius: 5px;
             }
             .row{
                 display: flex;
+                align-items: center;
+                justify-content: center;
                 gap:10px;
+
+            }
+            .screen{
+                background-color:#B4EBE6;
+                height: 40px;
+                width: 300px;
+                margin: 20px auto;
+                box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+                transform:  rotateX(-45deg)
             }
         </style>
     </head>
@@ -52,8 +64,8 @@
         </div>
         <div class="container2">
             <p>RS 200 PREMIUM</p>
-            <hr
-                <div class="row">
+            <hr>
+            <div class="row">
                 <p>A</p>
                 <div class="seat">1</div> 
                 <div class="seat">2</div> 
@@ -63,7 +75,119 @@
                 <div class="seat">6</div> 
                 <div class="seat">7</div> 
                 <div class="seat">8</div> 
+                <div class="seat">9</div> 
+                <div class="seat">10</div> 
+                <div class="seat">11</div> 
+                <div class="seat">12</div> 
+                <div class="seat">13</div> 
+                <div class="seat">14</div> 
             </div>
+            <div class="row">
+                <p>B</p>
+                <div class="seat">1</div> 
+                <div class="seat">2</div> 
+                <div class="seat">3</div> 
+                <div class="seat">4</div> 
+                <div class="seat">5</div> 
+                <div class="seat">6</div> 
+                <div class="seat">7</div> 
+                <div class="seat">8</div> 
+                <div class="seat">9</div> 
+                <div class="seat">10</div> 
+                <div class="seat">11</div> 
+                <div class="seat">12</div> 
+                <div class="seat">13</div> 
+                <div class="seat">14</div>
+            </div>
+            <div class="row">
+                <p>C</p>
+                <div class="seat">1</div> 
+                <div class="seat">2</div> 
+                <div class="seat">3</div> 
+                <div class="seat">4</div> 
+                <div class="seat">5</div> 
+                <div class="seat">6</div> 
+                <div class="seat">7</div> 
+                <div class="seat">8</div> 
+                <div class="seat">9</div> 
+                <div class="seat">10</div> 
+                <div class="seat">11</div> 
+                <div class="seat">12</div> 
+                <div class="seat">13</div> 
+                <div class="seat">14</div>
+            </div>
+            <div class="row">
+                <p>D</p>
+                <div class="seat">1</div> 
+                <div class="seat">2</div> 
+                <div class="seat">3</div> 
+                <div class="seat">4</div> 
+                <div class="seat">5</div> 
+                <div class="seat">6</div> 
+                <div class="seat">7</div> 
+                <div class="seat">8</div> 
+                <div class="seat">9</div> 
+                <div class="seat">10</div> 
+                <div class="seat">11</div> 
+                <div class="seat">12</div> 
+                <div class="seat">13</div> 
+                <div class="seat">14</div>
+            </div>
+            <div class="row">
+                <p>E</p>
+                <div class="seat">1</div> 
+                <div class="seat">2</div> 
+                <div class="seat">3</div> 
+                <div class="seat">4</div> 
+                <div class="seat">5</div> 
+                <div class="seat">6</div> 
+                <div class="seat">7</div> 
+                <div class="seat">8</div> 
+                <div class="seat">9</div> 
+                <div class="seat">10</div> 
+                <div class="seat">11</div> 
+                <div class="seat">12</div> 
+                <div class="seat">13</div> 
+                <div class="seat">14</div>
+            </div>
+            <div class="row">
+                <p>F</p>
+                <div class="seat">1</div> 
+                <div class="seat">2</div> 
+                <div class="seat">3</div> 
+                <div class="seat">4</div> 
+                <div class="seat">5</div> 
+                <div class="seat">6</div> 
+                <div class="seat">7</div> 
+                <div class="seat">8</div> 
+                <div class="seat">9</div> 
+                <div class="seat">10</div> 
+                <div class="seat">11</div> 
+                <div class="seat">12</div> 
+                <div class="seat">13</div> 
+                <div class="seat">14</div>
+            </div>
+            <div class="row">
+                <p>G</p>
+                <div class="seat">1</div> 
+                <div class="seat">2</div> 
+                <div class="seat">3</div> 
+                <div class="seat">4</div> 
+                <div class="seat">5</div> 
+                <div class="seat">6</div> 
+                <div class="seat">7</div> 
+                <div class="seat">8</div> 
+                <div class="seat">9</div> 
+                <div class="seat">10</div> 
+                <div class="seat">11</div> 
+                <div class="seat">12</div> 
+                <div class="seat">13</div> 
+                <div class="seat">14</div>
+            </div>
+
         </div>
+        <div  class="screen"></div>
+        <p align="center">All eyes are here Please!</p>
+
     </body>
 </html>
