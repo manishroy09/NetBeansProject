@@ -18,8 +18,17 @@
                 background-color: #B4EBE6;
                 padding: 20px;
             }
+
+            .seat{
+                border: 2px solid black;
+                padding: 10px;
+                height: 12px;
+                width: 15px;
+                margin: 3px;
+            }
             .row{
                 display: flex;
+                gap:10px;
             }
         </style>
     </head>
