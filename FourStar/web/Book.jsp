@@ -188,6 +188,10 @@
         </div>
         <div  class="screen"></div>
         <p align="center">All eyes are here Please!</p>
-
+        <div class=""></div>
+        <label>Set No :- </label>
+        <input type="text" id="setNo"><br><br>
+        <label>Total Amount  :- </label>
+        <input type="text" id="amount">
     </body>
 </html>
