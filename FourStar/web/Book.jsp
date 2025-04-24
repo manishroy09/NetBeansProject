@@ -42,6 +42,7 @@
                 box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
                 transform:  rotateX(-45deg)
             }
+            
         </style>
     </head>
     <body>
@@ -188,10 +189,11 @@
         </div>
         <div  class="screen"></div>
         <p align="center">All eyes are here Please!</p>
-        <div class=""></div>
+        <div class="selectedSeat" align="center">
         <label>Set No :- </label>
         <input type="text" id="setNo"><br><br>
         <label>Total Amount  :- </label>
         <input type="text" id="amount">
+        </div>
     </body>
 </html>
