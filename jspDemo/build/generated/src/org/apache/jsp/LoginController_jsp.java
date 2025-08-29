@@ -3,8 +3,9 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import com.manish.dao.UsersDAO;
 
-public final class Register_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class LoginController_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -44,46 +45,31 @@ public final class Register_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <title>Register Page</title>\n");
+      out.write("        <title>Login Controller</title>\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("        <form action=\"saveuser.jsp\">\n");
-      out.write("            <table width=\"60%\">\n");
-      out.write("                <tr> \n");
-      out.write("                    <td>Uid : </td>\n");
-      out.write("                    <td> <input type=\"text\" name=\"uid\"></td>\n");
-      out.write("                </tr>\n");
-      out.write("                 <tr>\n");
-      out.write("                    <td>Name : </td>\n");
-      out.write("                    <td><input type=\"text\" name=\"name\"></td>\n");
-      out.write("                </tr>\n");
-      out.write("                 <tr>\n");
-      out.write("                    <td>UserName : </td>\n");
-      out.write("                    <td><input type=\"text\" name=\"un\"></td>\n");
-      out.write("                </tr>\n");
-      out.write("                 <tr>\n");
-      out.write("                    <td>Password : </td>\n");
-      out.write("                    <td><input type=\"password\" name=\"ps\"></td>\n");
-      out.write("                </tr>\n");
-      out.write("                 <tr>\n");
-      out.write("                    <td>Email: </td>\n");
-      out.write("                    <td><input type=\"text\" name=\"email\"></td>\n");
-      out.write("                </tr>\n");
-      out.write("                 <tr>\n");
-      out.write("                    <td>Mobile : </td>\n");
-      out.write("                    <td><input type=\"text\" name=\"mobile\"></td>\n");
-      out.write("                </tr>\n");
-      out.write("                 \n");
-      out.write("                 <tr>\n");
-      out.write("                     <td>&nbsp;</td>\n");
-      out.write("                     <td><input type=\"submit\" value=\"Register \"></td>\n");
-      out.write("                </tr>\n");
-      out.write("            </table>\n");
-      out.write("        </form>\n");
+      out.write("        ");
+
+            String un = request.getParameter("un");
+            String ps = request.getParameter("ps");
+
+            UsersDAO ud = new UsersDAO();
+            int r = ud.logintCheck(un, ps);
+            if (r > 0) {
+                session.setAttribute("user", un);
+                response.sendRedirect("viewstudent.jsp");
+            } else {
+                out.println("Login fail please try Again....");
+                RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+                rd.include(request, response);
+            }
+        
+      out.write("\n");
       out.write("    </body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {
